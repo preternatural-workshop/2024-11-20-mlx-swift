@@ -50,6 +50,7 @@ struct ContentView: View {
                                 .font(.subheadline)
                             TextEditor(text: $userPrompt)
                                 .frame(height: 50)
+                                .font(.system(size: 18))
                                 .padding(8)
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 8)
@@ -75,6 +76,7 @@ struct ContentView: View {
                             Text("Response:")
                                 .font(.subheadline)
                             TextEditor(text: .constant(generatedOutput))
+                                .font(.system(size: 18))
                                 .frame(height: 200)
                                 .padding(8)
                                 .overlay(
