@@ -1,5 +1,5 @@
 //
-//  ModelLoader.swift
+//  ModelDownloadManager.swift
 //  RunModelLocally
 //
 //  Created by Natasha Murashev on 11/20/24.
@@ -11,15 +11,15 @@ import MLXNN
 import Tokenizers
 import Hub
 
-public final class ModelLoader: ObservableObject {
+public final class ModelDownloadManager: ObservableObject {
     
     @MainActor
-    public static let shared = ModelLoader()
+    public static let shared = ModelDownloadManager()
     
     public static let modelPath = "mlx-community/Nous-Hermes-2-Mistral-7B-DPO-4bit-MLX"
     
     @Published public var model = DownloadableModel(
-        name: ModelLoader.modelPath,
+        name: ModelDownloadManager.modelPath,
         url: URL(string: "\(HuggingFaceDownloader.downloadsURL)/\(modelPath)"),
         state: .notDownloaded
     )
@@ -33,7 +33,7 @@ public final class ModelLoader: ObservableObject {
 }
 
 // from: https://github.com/ml-explore/mlx-swift-examples/blob/main/Libraries/LLM/Load.swift
-extension ModelLoader {
+extension ModelDownloadManager {
     /// Loads `MistralModel` and sets the input parameters (the weights from the `.safetensors` files).
     public func loadModel() async throws -> MistralModel {
         let configurationURL = model.url!.appendingPathComponent("config.json")
@@ -90,7 +90,7 @@ extension ModelLoader {
     }
 }
 
-extension ModelLoader {
+extension ModelDownloadManager {
     
     
     private func loadWeights() throws -> [String: MLXArray] {
@@ -175,7 +175,7 @@ extension ModelLoader {
     }
 }
 
-extension ModelLoader {
+extension ModelDownloadManager {
     struct Error: Swift.Error {
         let message: String
     }

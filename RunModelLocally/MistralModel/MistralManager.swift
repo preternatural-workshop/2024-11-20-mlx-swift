@@ -1,5 +1,5 @@
 //
-//  MistralModelManager.swift
+//  MistralManager.swift
 //  RunModelLocally
 //
 //  Created by Natasha Murashev on 11/20/24.
@@ -10,7 +10,7 @@ import MLX
 import MLXRandom
 import Tokenizers
 
-class MistralModelManager {
+class MistralManager {
     public enum ModelState {
         case ready(Double?)
         case generating(Double)

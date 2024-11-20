@@ -22,9 +22,25 @@ public struct MistralConfiguration: Codable, Sendable {
     var tieWordEmbeddings: Bool = true
     var attentionBias: Bool = false
     var mlpBias: Bool = false
+    var quantization: Quantization
 
     var resolvedHeadDimensions: Int {
         headDimensions ?? (hiddenSize / attentionHeads)
+    }
+    
+    public struct Quantization: Codable, Sendable {
+        public init(groupSize: Int, bits: Int) {
+            self.groupSize = groupSize
+            self.bits = bits
+        }
+        
+        let groupSize: Int
+        let bits: Int
+        
+        enum CodingKeys: String, CodingKey {
+            case groupSize = "group_size"
+            case bits = "bits"
+        }
     }
 
     enum CodingKeys: String, CodingKey {
@@ -43,6 +59,7 @@ public struct MistralConfiguration: Codable, Sendable {
         case tieWordEmbeddings = "tie_word_embeddings"
         case attentionBias = "attention_bias"
         case mlpBias = "mlp_bias"
+        case quantization = "quantization"
     }
 
     public init(from decoder: Decoder) throws {
@@ -105,5 +122,7 @@ public struct MistralConfiguration: Codable, Sendable {
                     debugDescription: "rope_scaling must contain either 'type' or 'rope_type'")
             }
         }
+        
+        quantization = try container.decode(Quantization.self, forKey: .quantization)
     }
 }

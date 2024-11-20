@@ -6,6 +6,15 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		FADB41172CEDCB1600EBCC26 /* MLX in Frameworks */ = {isa = PBXBuildFile; productRef = FADB41162CEDCB1600EBCC26 /* MLX */; };
+		FADB41192CEDCB1600EBCC26 /* MLXFFT in Frameworks */ = {isa = PBXBuildFile; productRef = FADB41182CEDCB1600EBCC26 /* MLXFFT */; };
+		FADB411B2CEDCB1600EBCC26 /* MLXFast in Frameworks */ = {isa = PBXBuildFile; productRef = FADB411A2CEDCB1600EBCC26 /* MLXFast */; };
+		FADB411D2CEDCB1600EBCC26 /* MLXLinalg in Frameworks */ = {isa = PBXBuildFile; productRef = FADB411C2CEDCB1600EBCC26 /* MLXLinalg */; };
+		FADB411F2CEDCB1600EBCC26 /* MLXNN in Frameworks */ = {isa = PBXBuildFile; productRef = FADB411E2CEDCB1600EBCC26 /* MLXNN */; };
+		FADB41222CEDCB3E00EBCC26 /* Transformers in Frameworks */ = {isa = PBXBuildFile; productRef = FADB41212CEDCB3E00EBCC26 /* Transformers */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		FADB40D62CEDC9E200EBCC26 /* RunModelLocally.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunModelLocally.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +32,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FADB41222CEDCB3E00EBCC26 /* Transformers in Frameworks */,
+				FADB411B2CEDCB1600EBCC26 /* MLXFast in Frameworks */,
+				FADB411D2CEDCB1600EBCC26 /* MLXLinalg in Frameworks */,
+				FADB41172CEDCB1600EBCC26 /* MLX in Frameworks */,
+				FADB411F2CEDCB1600EBCC26 /* MLXNN in Frameworks */,
+				FADB41192CEDCB1600EBCC26 /* MLXFFT in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +80,12 @@
 			);
 			name = RunModelLocally;
 			packageProductDependencies = (
+				FADB41162CEDCB1600EBCC26 /* MLX */,
+				FADB41182CEDCB1600EBCC26 /* MLXFFT */,
+				FADB411A2CEDCB1600EBCC26 /* MLXFast */,
+				FADB411C2CEDCB1600EBCC26 /* MLXLinalg */,
+				FADB411E2CEDCB1600EBCC26 /* MLXNN */,
+				FADB41212CEDCB3E00EBCC26 /* Transformers */,
 			);
 			productName = RunModelLocally;
 			productReference = FADB40D62CEDC9E200EBCC26 /* RunModelLocally.app */;
@@ -94,6 +115,10 @@
 			);
 			mainGroup = FADB40CD2CEDC9E200EBCC26;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				FADB41152CEDCB1600EBCC26 /* XCRemoteSwiftPackageReference "mlx-swift" */,
+				FADB41202CEDCB3E00EBCC26 /* XCRemoteSwiftPackageReference "swift-transformers" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = FADB40D72CEDC9E200EBCC26 /* Products */;
 			projectDirPath = "";
@@ -247,7 +272,8 @@
 				CODE_SIGN_ENTITLEMENTS = RunModelLocally/RunModelLocally.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"RunModelLocally/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 9GMDZT68HT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -265,13 +291,13 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.RunModelLocally;
+				PRODUCT_BUNDLE_IDENTIFIER = ai.preternatural.RunModelLocally;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
 				XROS_DEPLOYMENT_TARGET = 2.1;
 			};
 			name = Debug;
@@ -284,7 +310,8 @@
 				CODE_SIGN_ENTITLEMENTS = RunModelLocally/RunModelLocally.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"RunModelLocally/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 9GMDZT68HT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -302,13 +329,13 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.natashatherobot.RunModelLocally;
+				PRODUCT_BUNDLE_IDENTIFIER = ai.preternatural.RunModelLocally;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
 				XROS_DEPLOYMENT_TARGET = 2.1;
 			};
 			name = Release;
@@ -335,6 +362,58 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FADB41152CEDCB1600EBCC26 /* XCRemoteSwiftPackageReference "mlx-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ml-explore/mlx-swift";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		FADB41202CEDCB3E00EBCC26 /* XCRemoteSwiftPackageReference "swift-transformers" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/huggingface/swift-transformers";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FADB41162CEDCB1600EBCC26 /* MLX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FADB41152CEDCB1600EBCC26 /* XCRemoteSwiftPackageReference "mlx-swift" */;
+			productName = MLX;
+		};
+		FADB41182CEDCB1600EBCC26 /* MLXFFT */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FADB41152CEDCB1600EBCC26 /* XCRemoteSwiftPackageReference "mlx-swift" */;
+			productName = MLXFFT;
+		};
+		FADB411A2CEDCB1600EBCC26 /* MLXFast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FADB41152CEDCB1600EBCC26 /* XCRemoteSwiftPackageReference "mlx-swift" */;
+			productName = MLXFast;
+		};
+		FADB411C2CEDCB1600EBCC26 /* MLXLinalg */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FADB41152CEDCB1600EBCC26 /* XCRemoteSwiftPackageReference "mlx-swift" */;
+			productName = MLXLinalg;
+		};
+		FADB411E2CEDCB1600EBCC26 /* MLXNN */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FADB41152CEDCB1600EBCC26 /* XCRemoteSwiftPackageReference "mlx-swift" */;
+			productName = MLXNN;
+		};
+		FADB41212CEDCB3E00EBCC26 /* Transformers */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FADB41202CEDCB3E00EBCC26 /* XCRemoteSwiftPackageReference "swift-transformers" */;
+			productName = Transformers;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FADB40CE2CEDC9E200EBCC26 /* Project object */;
 }
